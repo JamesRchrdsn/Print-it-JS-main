@@ -20,6 +20,7 @@ const slides = [
 
 const arrowLeft = document.querySelector(".arrow_left");
 const arrowRight = document.querySelector(".arrow_right");
+const dotsContainer = document.querySelector(".dots");
 
 arrowLeft.addEventListener("click", () => {
   console.log("gauche");
@@ -28,3 +29,14 @@ arrowLeft.addEventListener("click", () => {
 arrowRight.addEventListener("click", () => {
   console.log("droite");
 });
+
+function createDots() {
+  for (let i = 0; i < slides.length; i++) {
+    let bulletElement = document.createElement("a");
+    bulletElement.href = "#";
+    bulletElement.classList.add("dot");
+    dotsContainer.appendChild(bulletElement);
+  }
+}
+
+createDots();
