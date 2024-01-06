@@ -21,6 +21,7 @@ const slides = [
 const arrowLeft = document.querySelector(".arrow_left");
 const arrowRight = document.querySelector(".arrow_right");
 const dotsContainer = document.querySelector(".dots");
+let dotSelect = 0;
 
 arrowLeft.addEventListener("click", () => {
   console.log("gauche");
@@ -36,6 +37,10 @@ function createDots() {
     bulletElement.href = "#";
     bulletElement.classList.add("dot");
     dotsContainer.appendChild(bulletElement);
+
+    if (i === dotSelect) {
+      bulletElement.classList.add("dot_selected");
+    }
   }
 }
 
