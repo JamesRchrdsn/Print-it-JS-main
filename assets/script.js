@@ -32,7 +32,6 @@ function Left() {
     const slideDots = document.querySelectorAll(".dots .dot");
     slideDots[dotSelect].classList.remove("dot_selected");
     dotSelect--;
-
     if (dotSelect < 0) {
       dotSelect = 3;
     }
@@ -49,7 +48,6 @@ function Right() {
     const slideDots = document.querySelectorAll(".dots .dot");
     slideDots[dotSelect].classList.remove("dot_selected");
     dotSelect++;
-
     if (dotSelect > slides.length - 1) {
       dotSelect = 0;
     }
@@ -63,11 +61,9 @@ function Right() {
 // ainsi  que le dot actif
 function createDots() {
   for (let i = 0; i < slides.length; i++) {
-    let bulletElement = document.createElement("a");
-    bulletElement.href = "#";
+    let bulletElement = document.createElement("div");
     bulletElement.classList.add("dot");
     dotsContainer.appendChild(bulletElement);
-
     if (i === dotSelect) {
       bulletElement.classList.add("dot_selected");
     }
