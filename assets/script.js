@@ -21,7 +21,7 @@ const slides = [
 const arrowLeft = document.querySelector(".arrow_left");
 const arrowRight = document.querySelector(".arrow_right");
 const dotsContainer = document.querySelector(".dots");
-const img = document.querySelector(".allBanner img");
+const img = document.querySelector(".banner-img");
 const textLine = document.querySelector(".textLine");
 let dotSelect = 0;
 
